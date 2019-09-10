@@ -17,6 +17,6 @@ def self.drop_table
 end 
 
 def save
-  dog = Dog.new
+  DB[:conn].execute("INSERT INTO dog (name, breed) VALUES (?, ?);", name, breed)
 end 
 end 
