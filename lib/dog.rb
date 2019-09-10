@@ -15,4 +15,8 @@ end
 def self.drop_table
   DB[:conn].execute("DROP table dogs;")
 end 
+
+def save
+  dog = Dog.new
+end 
 end 
