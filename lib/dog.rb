@@ -37,7 +37,8 @@ def save
   return self
 end 
 
-def self.create(attributes) 
+def self.create(hash)
+  binding.pry
   
 end 
 
