@@ -8,4 +8,11 @@ def initialize(id: nil, name:, breed:)
   @id = id
 end 
 
+def self.create_table
+  
+end 
+
+def self.drop_table
+  DROP table dogs;
+end 
 end 
