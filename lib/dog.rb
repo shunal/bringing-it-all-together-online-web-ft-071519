@@ -17,7 +17,7 @@ def self.drop_table
 end 
 
 def save
-  DB[:conn].execute("INSERT INTO dog (name, breed) VALUES (?, ?);", self.name, self.breed)
+  DB[:conn].execute("INSERT INTO dogs (name, breed) VALUES (?, ?);", self.name, self.breed)
   @id = DB.execute("SELECT last_insert_rowid() FROM dogs")[0][0]
 end 
 end 
