@@ -9,7 +9,7 @@ def initialize(id: nil, name:, breed:)
 end 
 
 def self.create_table
-  DB[:conn].execute("CREATE TABLE dogs ")
+  DB[:conn].execute("CREATE TABLE dogs id INTEGER PRIMARY KEY, name TEXT, breed TEXT;")
 end 
 
 def self.drop_table
