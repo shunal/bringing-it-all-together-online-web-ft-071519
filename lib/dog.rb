@@ -37,8 +37,10 @@ def save
   return self
 end 
 
-def self.create(hash) {:name=>"Ralph", :breed=>"lab"}
-  
+def self.create(hash) #{:name=>"Ralph", :breed=>"lab"}
+  new_dog = Dog.new(hash)
+  new_dog.save
+  new_dog
 end 
 
 
