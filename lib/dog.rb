@@ -18,7 +18,7 @@ def self.drop_table
 end
 
 def self.new_from_db(array)
-  
+  new_dog = Dog.new(id: array[0], name: array[1], breed: array[2])
 end
 
 def save
