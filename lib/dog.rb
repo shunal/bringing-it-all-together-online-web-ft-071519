@@ -38,7 +38,7 @@ def save
 end 
 
 def self.create(attributes) 
-  binding.pry
+  
 end 
 
 
