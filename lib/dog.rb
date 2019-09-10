@@ -13,6 +13,6 @@ def self.create_table
 end 
 
 def self.drop_table
-  DROP table dogs;
+  DB[:conn].execute(DROP table dogs;)
 end 
 end 
