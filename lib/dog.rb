@@ -1,3 +1,4 @@
+reqire 'pry'
 class Dog
 
 attr_accessor :id, :name, :breed
@@ -14,7 +15,11 @@ end
 
 def self.drop_table
   DB[:conn].execute("DROP table dogs;")
-end 
+end
+
+def self.new_from_db(array)
+  binding.pry
+end
 
 def save
   DB[:conn].execute("INSERT INTO dogs (name, breed) VALUES (?, ?);", self.name, self.breed)
