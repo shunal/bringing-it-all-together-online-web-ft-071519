@@ -27,6 +27,10 @@ def self.find_by_name(name)
  end.first
 end 
 
+def update
+  DB[:conn].execite('UPDATE dogs SET name =? WHERE id =?;', name, id)
+end 
+
 def save
   DB[:conn].execute("INSERT INTO dogs (name, breed) VALUES (?, ?);", self.name, self.breed)
   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
