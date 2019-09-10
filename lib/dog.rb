@@ -28,7 +28,7 @@ def self.find_by_name(name)
 end 
 
 def update
-  DB[:conn].execite('UPDATE dogs SET name =? WHERE id =?;', name, id)
+  DB[:conn].execute('UPDATE dogs SET name =? WHERE id =?;', name, id)
 end 
 
 def save
