@@ -21,6 +21,10 @@ def self.new_from_db(array)
   new_dog = Dog.new(id: array[0], name: array[1], breed: array[2])
 end
 
+def find_by_name(name)
+  binding.pry
+end 
+
 def save
   DB[:conn].execute("INSERT INTO dogs (name, breed) VALUES (?, ?);", self.name, self.breed)
   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
