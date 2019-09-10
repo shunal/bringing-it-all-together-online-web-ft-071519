@@ -38,7 +38,6 @@ def save
 end 
 
 def self.create(hash) {:name=>"Ralph", :breed=>"lab"}
-  binding.pry
   
 end 
 
